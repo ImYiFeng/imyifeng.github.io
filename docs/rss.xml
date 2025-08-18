@@ -1,5 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一封来自遗风的信</title><link>https://blog.imyifeng.top</link><description>遗风在此个人Blog</description><copyright>一封来自遗风的信</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/ImYiFeng/YiPersonalFiles/refs/heads/main/my_avatar1.svg</url><title>avatar</title><link>https://blog.imyifeng.top</link></image><lastBuildDate>Sat, 15 Mar 2025 08:25:02 +0000</lastBuildDate><managingEditor>一封来自遗风的信</managingEditor><ttl>60</ttl><webMaster>一封来自遗风的信</webMaster><item><title>PowerShell 美化教程：Oh My Posh 完全配置指南</title><link>https://blog.imyifeng.top/post/PowerShell%20-mei-hua-jiao-cheng-%EF%BC%9AOh%20My%20Posh%20-wan-quan-pei-zhi-zhi-nan.html</link><description>## 0. 安装最新版 PowerShell
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一封来自遗风的信</title><link>https://blog.imyifeng.top</link><description>遗风在此个人Blog</description><copyright>一封来自遗风的信</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/ImYiFeng/YiPersonalFiles/refs/heads/main/my_avatar1.svg</url><title>avatar</title><link>https://blog.imyifeng.top</link></image><lastBuildDate>Mon, 18 Aug 2025 18:06:36 +0000</lastBuildDate><managingEditor>一封来自遗风的信</managingEditor><ttl>60</ttl><webMaster>一封来自遗风的信</webMaster><item><title>【搬运】Adobe全家桶不限速下载资源</title><link>https://blog.imyifeng.top/post/%E3%80%90-ban-yun-%E3%80%91Adobe-quan-jia-tong-bu-xian-su-xia-zai-zi-yuan.html</link><description>本文章资源均搬运自[克隆窝](https://www.uy5.net/)
+
+- 【Ps】[Photoshop (图像设计编辑处理)](https://www.uy5.net/adobe_photoshop/)
+- 【Pr】[Premiere Pro (视频编辑剪辑)](https://www.uy5.net/adobe_premiere/)
+- 【Ae】[After Effects (视频合成及特效制作)](https://www.uy5.net/adobe_after_effects/)
+- 【Au】[Audition (音频处理工具)](https://www.uy5.net/adobe_audition/)
+- 【Me】[Media Encoder (视频和音频编码渲染)](https://www.uy5.net/adobe_media_encoder/)
+- 【LrC】[Lightroom Classic (图像后期处理)](https://www.uy5.net/adobe_lightroom_classic/)
+- 【Ai】[Illustrator (矢量图形设计)](https://www.uy5.net/adobe_illustrator/)
+- 【Br】[Bridge (多媒体文件组织管理)](https://www.uy5.net/adobe_bridge/)
+- 【Id】[Indesign (印刷排版工具)](https://www.uy5.net/indesign_id/)
+- 【Ic】[InCopy (文字编写编辑协同)](https://www.uy5.net/adobe_incopy/)
+- 【Dn】[Dimension (三维3D建模工具)](https://www.uy5.net/adobe_dimension/)
+- 【Sa】[3D Sampler (3D材质管理制作)](https://www.uy5.net/adobe-substance-3d-sampler/)
+- 【Acrobat】[Acrobat PRO DC (PDF 处理设计)](https://www.uy5.net/adobe_acrobat/)
+。</description><guid isPermaLink="true">https://blog.imyifeng.top/post/%E3%80%90-ban-yun-%E3%80%91Adobe-quan-jia-tong-bu-xian-su-xia-zai-zi-yuan.html</guid><pubDate>Mon, 18 Aug 2025 18:05:26 +0000</pubDate></item><item><title>PowerShell 美化教程：Oh My Posh 完全配置指南</title><link>https://blog.imyifeng.top/post/PowerShell%20-mei-hua-jiao-cheng-%EF%BC%9AOh%20My%20Posh%20-wan-quan-pei-zhi-zhi-nan.html</link><description>## 0. 安装最新版 PowerShell
 
 ### 为什么需要升级？
 - Windows 自带的 PowerShell 5.0 功能有限
