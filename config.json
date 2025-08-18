@@ -4,5 +4,6 @@
     "avatarUrl":"https://raw.githubusercontent.com/ImYiFeng/YiPersonalFiles/refs/heads/main/my_avatar1.svg",
     "GMEEK_VERSION":"last",
     "homeUrl":"https://blog.imyifeng.top",
-    "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"
+    "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>",
+    "urlMode":"issue"
 }
