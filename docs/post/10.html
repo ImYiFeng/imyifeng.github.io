@@ -10,191 +10,13 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="## 0. 安装最新版 PowerShell
-
-### 为什么需要升级？
-- Windows 自带的 PowerShell 5.0 功能有限
-- 新版 PowerShell 7+ 支持跨平台、性能优化和更多新特性
-
-### 安装步骤：
-1. 前往 [官方仓库](https://github.com/PowerShell/PowerShell) 下载最新稳定版
-2. 安装完成后：
-   - 按 `Win + S` 搜索「终端」
-   - 打开「终端设置」→「启动」→「默认配置文件」→ 选择「PowerShell 7」
-3. 验证版本：
-   ```powershell
-   $PSVersionTable.PSVersion
-   ```
-
----
-
-## 1. 安装 Oh My Posh
-
-### 一键安装命令：
-```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force
-Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
-```
-
-### 验证安装：
-```powershell
-oh-my-posh --version  # 显示版本号即成功
-```
-
-> 💡 提示：如果提示命令不存在，请重启终端或手动刷新环境变量
-
----
-
-## 2. 配置 Nerd 字体
-
-### 为什么需要特殊字体？
-- **Nerd Fonts** 是集成了 2,000+ 图标的字体补丁
-- 支持 Powerline 符号和开发常用图标（文件类型、Git 状态等）
-- 普通编程字体无法显示这些特殊符号
-
-### 安装步骤：
-1. 前往 [Nerd Fonts 官网](https://www.nerdfonts.com/font-downloads) 下载
-2. 解压后右键字体文件 →「安装」
-3. 终端设置：
-   - 打开「默认值」→「外观」→「字体」
-   - 选择带有「NF」标识的字体（如 `MesloLGS NF`）
-
----
-
-## 3. 基础主题配置
-
-### 永久生效配置：
-```powershell
-# 允许执行本地脚本
-Set-ExecutionPolicy RemoteSigned -Scope LocalMachine
-
-# 创建/编辑配置文件
-if (!(Test-Path $PROFILE)) {
-    New-Item -Path $PROFILE -Type File -Force
-}
-notepad $PROFILE
-```
-
-### 配置文件内容：
-```powershell
-oh-my-posh init pwsh | Invoke-Expression
-```
-
-### 立即生效：
-```powershell
-. $PROFILE  # 重新加载配置
-```
-
----
-
-## 4. 主题定制指南
-
-### 主题选择技巧：
-1. 访问 [官方主题库](https://ohmyposh.dev/docs/themes) 预览效果
-2. 推荐新手主题：
-   - **jandedobbeleer**：信息全面，适合大屏
-   - **quick-term**：紧凑型（笔者同款）
-
-### 指定主题配置：
-```powershell
-# 修改配置文件内容为：
-oh-my-posh init pwsh --config '$env:POSH_THEMES_PATH/quick-term.omp.json' | Invoke-Expression
-```。">
-<meta property="og:title" content="PowerShell 美化教程：Oh My Posh 完全配置指南">
-<meta property="og:description" content="## 0. 安装最新版 PowerShell
-
-### 为什么需要升级？
-- Windows 自带的 PowerShell 5.0 功能有限
-- 新版 PowerShell 7+ 支持跨平台、性能优化和更多新特性
-
-### 安装步骤：
-1. 前往 [官方仓库](https://github.com/PowerShell/PowerShell) 下载最新稳定版
-2. 安装完成后：
-   - 按 `Win + S` 搜索「终端」
-   - 打开「终端设置」→「启动」→「默认配置文件」→ 选择「PowerShell 7」
-3. 验证版本：
-   ```powershell
-   $PSVersionTable.PSVersion
-   ```
-
----
-
-## 1. 安装 Oh My Posh
-
-### 一键安装命令：
-```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force
-Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
-```
-
-### 验证安装：
-```powershell
-oh-my-posh --version  # 显示版本号即成功
-```
-
-> 💡 提示：如果提示命令不存在，请重启终端或手动刷新环境变量
-
----
-
-## 2. 配置 Nerd 字体
-
-### 为什么需要特殊字体？
-- **Nerd Fonts** 是集成了 2,000+ 图标的字体补丁
-- 支持 Powerline 符号和开发常用图标（文件类型、Git 状态等）
-- 普通编程字体无法显示这些特殊符号
-
-### 安装步骤：
-1. 前往 [Nerd Fonts 官网](https://www.nerdfonts.com/font-downloads) 下载
-2. 解压后右键字体文件 →「安装」
-3. 终端设置：
-   - 打开「默认值」→「外观」→「字体」
-   - 选择带有「NF」标识的字体（如 `MesloLGS NF`）
-
----
-
-## 3. 基础主题配置
-
-### 永久生效配置：
-```powershell
-# 允许执行本地脚本
-Set-ExecutionPolicy RemoteSigned -Scope LocalMachine
-
-# 创建/编辑配置文件
-if (!(Test-Path $PROFILE)) {
-    New-Item -Path $PROFILE -Type File -Force
-}
-notepad $PROFILE
-```
-
-### 配置文件内容：
-```powershell
-oh-my-posh init pwsh | Invoke-Expression
-```
-
-### 立即生效：
-```powershell
-. $PROFILE  # 重新加载配置
-```
-
----
-
-## 4. 主题定制指南
-
-### 主题选择技巧：
-1. 访问 [官方主题库](https://ohmyposh.dev/docs/themes) 预览效果
-2. 推荐新手主题：
-   - **jandedobbeleer**：信息全面，适合大屏
-   - **quick-term**：紧凑型（笔者同款）
-
-### 指定主题配置：
-```powershell
-# 修改配置文件内容为：
-oh-my-posh init pwsh --config '$env:POSH_THEMES_PATH/quick-term.omp.json' | Invoke-Expression
-```。">
+<meta name="description" content="Windows 和 Linux 系统时间不一致通常是因为两者对硬件时钟的处理方式不同。">
+<meta property="og:title" content="Windows 和 Linux 系统时间不一致的解决办法">
+<meta property="og:description" content="Windows 和 Linux 系统时间不一致通常是因为两者对硬件时钟的处理方式不同。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.imyifeng.top/post/PowerShell%20-mei-hua-jiao-cheng-%EF%BC%9AOh%20My%20Posh%20-wan-quan-pei-zhi-zhi-nan.html">
+<meta property="og:url" content="https://blog.imyifeng.top/post/10.html">
 <meta property="og:image" content="https://raw.githubusercontent.com/ImYiFeng/YiPersonalFiles/refs/heads/main/my_avatar1.svg">
-<title>PowerShell 美化教程：Oh My Posh 完全配置指南</title>
+<title>Windows 和 Linux 系统时间不一致的解决办法</title>
 <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
@@ -237,7 +59,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">PowerShell 美化教程：Oh My Posh 完全配置指南</h1>
+<h1 class="postTitle">Windows 和 Linux 系统时间不一致的解决办法</h1>
 <div class="title-right">
     <a href="https://blog.imyifeng.top" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -245,7 +67,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/ImYiFeng/imyifeng.github.io/issues/12" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/ImYiFeng/imyifeng.github.io/issues/10" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -261,84 +83,59 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h2>0. 安装最新版 PowerShell</h2>
-<h3>为什么需要升级？</h3>
-<ul>
-<li>Windows 自带的 PowerShell 5.0 功能有限</li>
-<li>新版 PowerShell 7+ 支持跨平台、性能优化和更多新特性</li>
-</ul>
-<h3>安装步骤：</h3>
+<div class="markdown-body" id="postBody"><p>Windows 和 Linux 系统时间不一致通常是因为两者对硬件时钟的处理方式不同。Windows 将硬件时钟（RTC）视为本地时间，而 Linux 默认将其视为 UTC 时间。以下是解决方法：</p>
+<h3>方法一：让 Linux 使用本地时间</h3>
 <ol>
-<li>前往 <a href="https://github.com/PowerShell/PowerShell">官方仓库</a> 下载最新稳定版</li>
-<li>安装完成后：
-<ul>
-<li>按 <code class="notranslate">Win + S</code> 搜索「终端」</li>
-<li>打开「终端设置」→「启动」→「默认配置文件」→ 选择「PowerShell 7」</li>
-</ul>
+<li>
+<p><strong>编辑配置文件</strong><br>
+在 Linux 中打开终端，编辑 <code class="notranslate">/etc/adjtime</code> 文件：</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">sudo nano /etc/adjtime</pre></div>
+<p>将 <code class="notranslate">UTC</code> 改为 <code class="notranslate">LOCAL</code>。</p>
 </li>
-<li>验证版本：
-<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-c1">$PSVersionTable<span class="pl-smi">.PSVersion</span></span></pre></div>
+<li>
+<p><strong>更新硬件时钟</strong><br>
+保存并退出后，运行以下命令更新硬件时钟：</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">sudo hwclock --systohc</pre></div>
+</li>
+<li>
+<p><strong>重启系统</strong><br>
+重启后，时间应保持一致。</p>
 </li>
 </ol>
-<hr>
-<h2>1. 安装 Oh My Posh</h2>
-<h3>一键安装命令：</h3>
-<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-c1">Set-ExecutionPolicy</span> Bypass <span class="pl-k">-</span>Scope <span class="pl-k">Process</span> <span class="pl-k">-</span>Force
-<span class="pl-c1">Invoke-Expression</span> ((<span class="pl-c1">New-Object</span> System.Net.WebClient).DownloadString(<span class="pl-s"><span class="pl-pds">'</span>https://ohmyposh.dev/install.ps1<span class="pl-pds">'</span></span>))</pre></div>
-<h3>验证安装：</h3>
-<div class="highlight highlight-source-powershell"><pre class="notranslate">oh<span class="pl-k">-</span>my<span class="pl-k">-</span>posh <span class="pl-k">--</span>version  <span class="pl-c"><span class="pl-c">#</span> 显示版本号即成功</span></pre></div>
-<blockquote>
-<p>💡 提示：如果提示命令不存在，请重启终端或手动刷新环境变量</p>
-</blockquote>
-<hr>
-<h2>2. 配置 Nerd 字体</h2>
-<h3>为什么需要特殊字体？</h3>
-<ul>
-<li><strong>Nerd Fonts</strong> 是集成了 2,000+ 图标的字体补丁</li>
-<li>支持 Powerline 符号和开发常用图标（文件类型、Git 状态等）</li>
-<li>普通编程字体无法显示这些特殊符号</li>
-</ul>
-<h3>安装步骤：</h3>
+<h3>方法二：让 Windows 使用 UTC 时间</h3>
 <ol>
-<li>前往 <a href="https://www.nerdfonts.com/font-downloads" rel="nofollow">Nerd Fonts 官网</a> 下载</li>
-<li>解压后右键字体文件 →「安装」</li>
-<li>终端设置：
-<ul>
-<li>打开「默认值」→「外观」→「字体」</li>
-<li>选择带有「NF」标识的字体（如 <code class="notranslate">MesloLGS NF</code>）</li>
-</ul>
+<li>
+<p><strong>修改注册表</strong><br>
+在 Windows 中按 <code class="notranslate">Win + R</code>，输入 <code class="notranslate">regedit</code>，打开注册表编辑器。<br>
+找到路径：</p>
+<pre class="notranslate"><code class="notranslate">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation
+</code></pre>
+<p>右键新建一个 <code class="notranslate">DWORD (32-bit) Value</code>，命名为 <code class="notranslate">RealTimeIsUniversal</code>，并将其值设为 <code class="notranslate">1</code>。</p>
+</li>
+<li>
+<p><strong>重启系统</strong><br>
+重启后，Windows 会将硬件时钟视为 UTC 时间。</p>
 </li>
 </ol>
-<hr>
-<h2>3. 基础主题配置</h2>
-<h3>永久生效配置：</h3>
-<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> 允许执行本地脚本</span>
-<span class="pl-c1">Set-ExecutionPolicy</span> RemoteSigned <span class="pl-k">-</span>Scope LocalMachine
-
-<span class="pl-c"><span class="pl-c">#</span> 创建/编辑配置文件</span>
-<span class="pl-k">if</span> (<span class="pl-k">!</span>(<span class="pl-c1">Test-Path</span> <span class="pl-c1">$PROFILE</span>)) {
-    <span class="pl-c1">New-Item</span> <span class="pl-k">-</span>Path <span class="pl-c1">$PROFILE</span> <span class="pl-k">-</span>Type File <span class="pl-k">-</span>Force
-}
-notepad <span class="pl-c1">$PROFILE</span></pre></div>
-<h3>配置文件内容：</h3>
-<div class="highlight highlight-source-powershell"><pre class="notranslate">oh<span class="pl-k">-</span>my<span class="pl-k">-</span>posh init pwsh <span class="pl-k">|</span> <span class="pl-c1">Invoke-Expression</span></pre></div>
-<h3>立即生效：</h3>
-<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-k">.</span> <span class="pl-c1">$PROFILE</span>  <span class="pl-c"><span class="pl-c">#</span> 重新加载配置</span></pre></div>
-<hr>
-<h2>4. 主题定制指南</h2>
-<h3>主题选择技巧：</h3>
+<h3>方法三：手动同步时间</h3>
 <ol>
-<li>访问 <a href="https://ohmyposh.dev/docs/themes" rel="nofollow">官方主题库</a> 预览效果</li>
-<li>推荐新手主题：
-<ul>
-<li><strong>jandedobbeleer</strong>：信息全面，适合大屏</li>
-<li><strong>quick-term</strong>：紧凑型（笔者同款）</li>
-</ul>
+<li>
+<p><strong>在 Linux 中同步时间</strong><br>
+使用以下命令同步时间：</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">sudo timedatectl set-ntp <span class="pl-c1">true</span></pre></div>
+</li>
+<li>
+<p><strong>在 Windows 中同步时间</strong><br>
+打开“设置” -&gt; “时间和语言” -&gt; “日期和时间”，启用“自动设置时间”。</p>
 </li>
 </ol>
-<h3>指定主题配置：</h3>
-<div class="highlight highlight-source-powershell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> 修改配置文件内容为：</span>
-oh<span class="pl-k">-</span>my<span class="pl-k">-</span>posh init pwsh <span class="pl-k">--</span>config <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$<span class="pl-c1">env:</span>POSH_THEMES_PATH</span>/quick-term.omp.json<span class="pl-pds">"</span></span> <span class="pl-k">|</span> <span class="pl-c1">Invoke-Expression</span></pre></div></div>
+<h3>总结</h3>
+<ul>
+<li><strong>方法一</strong>：Linux 使用本地时间。</li>
+<li><strong>方法二</strong>：Windows 使用 UTC 时间。</li>
+<li><strong>方法三</strong>：手动同步时间。</li>
+</ul>
+<p>选择适合你的方法即可解决时间不一致问题。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

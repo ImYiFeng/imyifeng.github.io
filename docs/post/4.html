@@ -10,13 +10,13 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="在使用CLion时，如果不进行任何配置，默认情况下CLion的控制台会输出乱码中文。">
-<meta property="og:title" content="一种解决CLion控制台中文乱码问题">
-<meta property="og:description" content="在使用CLion时，如果不进行任何配置，默认情况下CLion的控制台会输出乱码中文。">
+<meta name="description" content="很多IDM破解版本会在使用一段时间后失效，并弹窗提示你购买。">
+<meta property="og:title" content="IDM破解版避免破解失效的终极解决办法">
+<meta property="og:description" content="很多IDM破解版本会在使用一段时间后失效，并弹窗提示你购买。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.imyifeng.top/post/yi-zhong-jie-jue-CLion-kong-zhi-tai-zhong-wen-luan-ma-wen-ti.html">
+<meta property="og:url" content="https://blog.imyifeng.top/post/4.html">
 <meta property="og:image" content="https://raw.githubusercontent.com/ImYiFeng/YiPersonalFiles/refs/heads/main/my_avatar1.svg">
-<title>一种解决CLion控制台中文乱码问题</title>
+<title>IDM破解版避免破解失效的终极解决办法</title>
 
 
 
@@ -49,7 +49,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">一种解决CLion控制台中文乱码问题</h1>
+<h1 class="postTitle">IDM破解版避免破解失效的终极解决办法</h1>
 <div class="title-right">
     <a href="https://blog.imyifeng.top" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -57,7 +57,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/ImYiFeng/imyifeng.github.io/issues/5" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/ImYiFeng/imyifeng.github.io/issues/4" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -73,72 +73,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>在使用CLion时，如果不进行任何配置，默认情况下CLion的控制台会输出乱码中文。这是由于CLion文件编码默认为UTF-8，而Windows终端默认是GBK导致的。</p>
-<h2>方法一：修改文件编码</h2>
+<div class="markdown-body" id="postBody"><p>很多IDM破解版本会在使用一段时间后失效，并弹窗提示你购买。经过研究，这主要是因为IDM在浏览器中的插件 <strong>IDM Integration Module</strong> 自动更新导致的。因此，解决方法也很明确，即禁止 <strong>IDM Integration Module</strong> 插件自动更新。</p>
+<p>然而，浏览器本身无法设置是否自动更新插件，因此只能通过修改插件所在文件夹的读写权限来实现这一目标，将其设置为只读即可一劳永逸。</p>
+<h2>附：Edge浏览器插件文件存放目录</h2>
 <ul>
-<li>点击右下角的UTF-8，并将其修改为GBK。</li>
-<li>但这种方法治标不治本，并不推荐。</li>
-</ul>
-<h2>方法二：将Windows编码改为UTF-8</h2>
-<ol>
-<li>打开控制面板 &gt; 时钟与区域 &gt; 更改日期、时间或数字格式 &gt; 管理 &gt; 更改系统区域设置。</li>
-<li>选择“Beta版：使用Unicode UTF-8提供全球语言支持”。</li>
-<li>这种方法虽然能解决乱码问题，但很多其他程序依赖GBK编码，会导致部分程序文字乱码，也不是很推荐。</li>
-</ol>
-<h2>方法三：使用cygwin64编译</h2>
-<p>这种方法一劳永逸，虽然cygwin64编译器的效率并没有mingw64好，但在C语言学习阶段可以忽略这个问题，而且实际开发建议使用类Unix环境而非Windows进行。</p>
-<h3>安装步骤</h3>
-<ol>
-<li>
-<p><strong>下载安装Cygwin64</strong></p>
-<ul>
-<li>访问 <a href="https://www.cygwin.com/install.html" rel="nofollow">Cygwin官网</a> 下载安装程序。</li>
-<li>从互联网安装。</li>
-</ul>
-</li>
-<li>
-<p><strong>选择安装路径</strong></p>
-<ul>
-<li>选择Cygwin64的安装路径，点击下一步。</li>
-</ul>
-</li>
-<li>
-<p><strong>选择本地软件包目录</strong></p>
-<ul>
-<li>选择Cygwin64本地软件包目录，点击下一步。</li>
-</ul>
-</li>
-<li>
-<p><strong>选择下载站点</strong></p>
-<ul>
-<li>下载站点选择国内镜像站，如阿里云或华为云。</li>
-</ul>
-</li>
-<li>
-<p><strong>选择软件包</strong></p>
-<ul>
-<li>在选择软件包页面，分别搜索并选择以下软件包的最新版本：
-<ul>
-<li><code class="notranslate">gcc-core</code></li>
-<li><code class="notranslate">gcc-g++</code></li>
-<li><code class="notranslate">gdb</code></li>
-<li><code class="notranslate">make</code></li>
-<li><code class="notranslate">binutils</code></li>
-</ul>
-</li>
-<li>点击下一步等待安装。</li>
-</ul>
-</li>
-<li>
-<p><strong>配置CLion</strong></p>
-<ul>
-<li>打开CLion &gt; 设置 &gt; 构建、执行、部署 &gt; 工具链。</li>
-<li>点击加号，选择Cygwin，并点击上箭头将其移至第一位，它会自动检测Cygwin64安装位置。</li>
-</ul>
-</li>
-</ol>
-<h3>验证</h3>
-<p>配置完毕后，编译运行C语言程序，即可发现控制台已经可以正常输出中文了。</p></div>
+<li><code class="notranslate">%localappdata%\Microsoft\Edge\User Data\Default\Extensions\</code></li>
+</ul></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

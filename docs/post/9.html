@@ -10,13 +10,15 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="Windows 和 Linux 系统时间不一致通常是因为两者对硬件时钟的处理方式不同。">
-<meta property="og:title" content="Windows 和 Linux 系统时间不一致的解决办法">
-<meta property="og:description" content="Windows 和 Linux 系统时间不一致通常是因为两者对硬件时钟的处理方式不同。">
+<meta name="description" content="## 1. 跳过联网
+- 安装系统时请不要联网，如果插入了网线，请拔掉。">
+<meta property="og:title" content="Windows 跳过联网，禁用更新，数字激活教程">
+<meta property="og:description" content="## 1. 跳过联网
+- 安装系统时请不要联网，如果插入了网线，请拔掉。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.imyifeng.top/post/Windows%20-he-%20Linux%20-xi-tong-shi-jian-bu-yi-zhi-de-jie-jue-ban-fa.html">
+<meta property="og:url" content="https://blog.imyifeng.top/post/9.html">
 <meta property="og:image" content="https://raw.githubusercontent.com/ImYiFeng/YiPersonalFiles/refs/heads/main/my_avatar1.svg">
-<title>Windows 和 Linux 系统时间不一致的解决办法</title>
+<title>Windows 跳过联网，禁用更新，数字激活教程</title>
 <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
@@ -59,7 +61,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">Windows 和 Linux 系统时间不一致的解决办法</h1>
+<h1 class="postTitle">Windows 跳过联网，禁用更新，数字激活教程</h1>
 <div class="title-right">
     <a href="https://blog.imyifeng.top" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -67,7 +69,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/ImYiFeng/imyifeng.github.io/issues/10" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/ImYiFeng/imyifeng.github.io/issues/9" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -83,59 +85,47 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>Windows 和 Linux 系统时间不一致通常是因为两者对硬件时钟的处理方式不同。Windows 将硬件时钟（RTC）视为本地时间，而 Linux 默认将其视为 UTC 时间。以下是解决方法：</p>
-<h3>方法一：让 Linux 使用本地时间</h3>
-<ol>
-<li>
-<p><strong>编辑配置文件</strong><br>
-在 Linux 中打开终端，编辑 <code class="notranslate">/etc/adjtime</code> 文件：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">sudo nano /etc/adjtime</pre></div>
-<p>将 <code class="notranslate">UTC</code> 改为 <code class="notranslate">LOCAL</code>。</p>
-</li>
-<li>
-<p><strong>更新硬件时钟</strong><br>
-保存并退出后，运行以下命令更新硬件时钟：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">sudo hwclock --systohc</pre></div>
-</li>
-<li>
-<p><strong>重启系统</strong><br>
-重启后，时间应保持一致。</p>
-</li>
-</ol>
-<h3>方法二：让 Windows 使用 UTC 时间</h3>
-<ol>
-<li>
-<p><strong>修改注册表</strong><br>
-在 Windows 中按 <code class="notranslate">Win + R</code>，输入 <code class="notranslate">regedit</code>，打开注册表编辑器。<br>
-找到路径：</p>
-<pre class="notranslate"><code class="notranslate">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation
-</code></pre>
-<p>右键新建一个 <code class="notranslate">DWORD (32-bit) Value</code>，命名为 <code class="notranslate">RealTimeIsUniversal</code>，并将其值设为 <code class="notranslate">1</code>。</p>
-</li>
-<li>
-<p><strong>重启系统</strong><br>
-重启后，Windows 会将硬件时钟视为 UTC 时间。</p>
-</li>
-</ol>
-<h3>方法三：手动同步时间</h3>
-<ol>
-<li>
-<p><strong>在 Linux 中同步时间</strong><br>
-使用以下命令同步时间：</p>
-<div class="highlight highlight-source-shell"><pre class="notranslate">sudo timedatectl set-ntp <span class="pl-c1">true</span></pre></div>
-</li>
-<li>
-<p><strong>在 Windows 中同步时间</strong><br>
-打开“设置” -&gt; “时间和语言” -&gt; “日期和时间”，启用“自动设置时间”。</p>
-</li>
-</ol>
-<h3>总结</h3>
+<div class="markdown-body" id="postBody"><h2>1. 跳过联网</h2>
 <ul>
-<li><strong>方法一</strong>：Linux 使用本地时间。</li>
-<li><strong>方法二</strong>：Windows 使用 UTC 时间。</li>
-<li><strong>方法三</strong>：手动同步时间。</li>
+<li>安装系统时请不要联网，如果插入了网线，请拔掉。</li>
+<li>安装完系统进入自定义开箱体验(OOBE)界面后，一路下一步到“让我们为你连接到网络”界面。</li>
+<li>按 <code class="notranslate">Shift + F10</code>（注：部分笔记本需要 <code class="notranslate">Shift + Fn + F10</code>），打开命令提示符。</li>
+<li>输入 <code class="notranslate">OOBE\BypassNRO.cmd</code>，按下回车，会自动重启。</li>
+<li>重启后，则会出现“我没有 Internet 连接”选项，使用此选项即可跳过联网使用本地账户进入系统。</li>
 </ul>
-<p>选择适合你的方法即可解决时间不一致问题。</p></div>
+<h2>2. 禁用更新</h2>
+<h3>方法一：使用 Optimizer 软件</h3>
+<ul>
+<li>开源地址：<a href="https://github.com/hellzerg/optimizer">https://github.com/hellzerg/optimizer</a></li>
+<li>下载进入软件后选择上方“Windows11”选项卡，在“Windows Update”选项类别下勾选所有选项，即可禁用 Windows 更新。</li>
+</ul>
+<h3>方法二：使用组策略编辑器（仅适用于专业版、企业版系统）</h3>
+<p>这里提供两种方法，请任选其一</p>
+<h4>彻底禁用更新</h4>
+<ul>
+<li>按下 <code class="notranslate">Win + R</code> 键，输入 <code class="notranslate">gpedit.msc</code>，按回车，进入组策略编辑器。</li>
+<li>在左侧树形结构中，找到“计算机配置” -&gt; “管理模板” -&gt; “Windows 组件” -&gt; “Windows 更新” -&gt; “管理最终用户体验”。</li>
+<li>双击“配置自动更新”，将其改为“已禁用”。</li>
+<li>双击“删除使用所有 Windows 更新功能的访问权限”，将其改为“已启用”。</li>
+</ul>
+<h4>限制更新特定版本</h4>
+<ul>
+<li>操作同上，进入“管理从 Windows 更新提供的更新”。</li>
+<li>双击“选择目标功能更新版本”，更改为“已启用”。</li>
+<li>在下方填入目标版本，例如，在第一个输入框填入“Windows 11”，第二个输入框输入“23H2”，即可限制更新到 23H2 版本，无法更新到更新版本。</li>
+</ul>
+<h2>3. 数字激活</h2>
+<ul>
+<li>开源地址：<a href="https://github.com/massgravel/Microsoft-Activation-Scripts">https://github.com/massgravel/Microsoft-Activation-Scripts</a></li>
+<li>右键任务栏 Windows 徽标，选择“终端管理员”或者“Powershell 管理员”，以管理员权限运行 PowerShell。</li>
+<li>若运行的为命令提示符（cmd），在 cmd 中输入 <code class="notranslate">powershell</code>，再按回车，即可进入 PowerShell。</li>
+<li>在 PowerShell 中输入：</li>
+</ul>
+<div class="highlight highlight-source-powershell"><pre class="notranslate">irm https:<span class="pl-k">//</span>get.activated.win <span class="pl-k">|</span> iex</pre></div>
+<ul>
+<li>按下回车，等待一段时间，可以看到运行了 Microsoft Activation Scripts。</li>
+<li>按照提示输入 <code class="notranslate">1</code>，即可数字激活（HWID 激活）Windows 系统。</li>
+</ul></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
